@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: unit1
+title: Foundations and Setup
+description: Learn the basics of what a SHMUP is, and the PixiJS engine that
+  we'll be using to build one. Learn how to set up the basics of the PixiJS
+  engine.
+objectives: |-
+  - Understand what a SHMUP is
+  - Understand what the PixiJS engine is
+  - Configure PixiJS for basic rendering
+lessons:
+  - lesson1/index.yml
