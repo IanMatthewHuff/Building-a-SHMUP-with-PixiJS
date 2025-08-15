@@ -1,12 +1,14 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: unit1
 title: Foundations and Setup
-description: Learn the basics of what a SHMUP is, and the PixiJS engine that
-  we'll be using to build one. Learn how to set up the basics of the PixiJS
-  engine.
+description: This unit introduces students to SHMUP games and establishes the
+  technical foundation needed to build web games using PixiJS. Students will set
+  up their development environment and create their first interactive game
+  window.
 objectives: |-
-  - Understand what a SHMUP is
-  - Understand what the PixiJS engine is
-  - Configure PixiJS for basic rendering
+  - Understand the core mechanics and appeal of SHMUP games
+  - Set up a complete PixiJS development environment
+  - Create and render basic game objects on screen
+  - Implement fundamental game loop concepts
 lessons:
   - lesson1/index.yml
