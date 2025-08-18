@@ -8,5 +8,26 @@ contacts:
   - displayName: Ian Huff
     pictureUrl: https://avatars.githubusercontent.com/u/812783?v=4
     homePageUrl: https://github.com/IanMatthewHuff
+files:
+  - path: course1/unit1/lesson1/lessonpart3/example.html
+    content: >-
+      <!DOCTYPE html>
+
+      <html lang="en">
+
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>A Simple HTML Page</title>
+      </head>
+
+      <body>
+          <h1>Welcome to My Simple Page</h1>
+          <p>This is a basic HTML page</p>
+          <p>If running in the VS Code for Education preview window, it will automatically update as you change the code</p>
+          <p>Try editing the text: [HERE] to see it change in the preview window</p>
+      </body>
+
+      </html>
 units:
   - unit1/index.yml

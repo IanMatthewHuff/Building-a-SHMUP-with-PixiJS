@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart3
+title: Viewing HTML in VS Code for Education
+content: Enter your content here
+showEditor: true
+editors:
+  - course1/unit1/lesson1/lessonpart3/example.html

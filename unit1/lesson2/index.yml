@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lesson2
+title: Game Window and Basic Rendering
+description: Students learn to create the game canvas and understand PixiJS's
+  rendering system. They'll work with sprites, the stage, and basic display
+  object manipulation.
+objectives: |-
+  - Create a properly sized game canvas and renderer
+  - Load and display sprite images using PixiJS
+  - Position and scale sprites on the game stage
+  - Understand the relationship between stage and display objects
+lessonParts:
+  - lessonpart1.yml

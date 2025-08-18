@@ -12,3 +12,4 @@ objectives: |-
   - Implement fundamental game loop concepts
 lessons:
   - lesson1/index.yml
+  - lesson2/index.yml
