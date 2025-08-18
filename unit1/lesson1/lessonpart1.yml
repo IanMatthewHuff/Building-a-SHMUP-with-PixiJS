@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: What is a SHMUP game?
-content: >
+content: >+
   SHMUP stands for "Shoot 'em up" a video game genre characterized by a side or
   overhead view of a ship (or other character) weaving through waves of incoming
   fire while blasting down enemy ships. It's a genre forged in the fires of 80s
@@ -22,3 +22,25 @@ content: >
   solidly selling indie SHMUP games are created by a single developer or a very
   small team. So they make a great first genre to start with when learning how
   to code with a new game engine.
+
+
+  > \[!NOTE]
+
+  > To help make sure you are learning along with this course, questions have
+  been added in on many of the pages, but feel free to ignore them and just
+  progress along the course if you wish!
+
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: Which of these is not a SHMUP game title?
+        options:
+          - id: "1"
+            value: Gradius
+            isCorrect: true
+          - id: "2"
+            value: Space Lazers
+          - id: "3"
+            value: DoDonPachi
