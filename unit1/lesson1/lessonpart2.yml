@@ -11,15 +11,17 @@ content: |+
 
   With so many possible game engines out there, why did we pick PixiJS to use? For our purposes we wanted something that was the following:
 
-  * Small - We don't want a large download size for students
+  * **Small** - We don't want a large download size for students
 
-  * Fast - SHMUPs require split second timing, we don't want anything laggy
+  * **Fast** - SHMUPs require split second timing, we don't want anything laggy
 
-  * Simple - We don't want a whole bunch of confusing boiler plate or engine code that we don't need
+  * **Simple** - We don't want a whole bunch of confusing boiler plate or engine code that we don't need
 
-  * Web Based - Our games should be playable from a browser window
+  * **Web Based** - Our games should be playable from a browser window
 
-  * Self-Contained - Stitching together code or assets from multiple programs can be tricky, we want to avoid that
+  * **Self-Contained** - Stitching together code or assets from multiple programs can be tricky, we want to avoid that
+
+  * **Free** - We are looking for something totally free to use
 
   With that above criteria PixiJS is a great fit for us. It's explicitly billed as a rendering engine as opposed to a full game engine, using something like Unity might provide us with a much more fully feature game engine, but we'll learning more by implementing that basic game engine code ourselves.
 
