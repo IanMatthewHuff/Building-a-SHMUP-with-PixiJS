@@ -1,3 +1,24 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
-title: Page 1
+title: What is a SHMUP game?
+content: >
+  SHMUP stands for "Shoot 'em up" a video game genre characterized by a side or
+  overhead view of a ship (or other character) weaving through waves of incoming
+  fire while blasting down enemy ships. It's a genre forged in the fires of 80s
+  and 90s quarter slurping arcade machines, where you were expected to lose over
+  and over again to get better at memorizing how to optimally move through the
+  stages.&#x20;
+
+
+  Games like Gradius and Space Invaders kicked off the genre in the early years,
+  followed up by classics like Gradius and R-Type in the late 80s, and evolving
+  into the bullet-hell (SHMUP games characterized by massive amounts of enemy
+  fire to dodge) Cave games like DoDonPachi of the 90s.
+
+
+  It's a small genre these days, far from the days where it ruled the arcades.
+  But one cool thing about SHMUPs is they don't require a massive amount of
+  text, video, 3d models or other expensive assets to get working. Today many
+  solidly selling indie SHMUP games are created by a single developer or a very
+  small team. So they make a great first genre to start with when learning how
+  to code with a new game engine.
