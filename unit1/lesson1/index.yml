@@ -11,3 +11,4 @@ objectives: |-
   - Create and display a simple PixiJS application
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml
