@@ -30,6 +30,10 @@ content: >+
   been added in on many of the pages, but feel free to ignore them and just
   progress along the course if you wish!
 
+  >
+
+  > <br />
+
 questionGroups:
   - id: "1"
     questions:
