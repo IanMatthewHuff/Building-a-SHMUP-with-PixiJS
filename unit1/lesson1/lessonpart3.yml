@@ -1,7 +1,20 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart3
 title: Viewing HTML in VS Code for Education
-content: Enter your content here
+content: >
+  This course assume that you have a bit of basic knowledge about HTML and
+  Javascript. Some concepts will be explained in the course, but it might be
+  tricky to follow along with if totally new to this. If you want to get a bit
+  of basic knowledge here, VS Code for Education's [Intro to Web
+  Development](https://vscodeedu.com/courses/intro-to-web-dev) course is a great
+  place to start out!
+
+
+  ### Previewing HTML
+
+
+  While coding, our game can be previewed by running it in the built-in HTML
+  preview window provided by VS Code for Education. 
 showEditor: true
 editors:
   - course1/unit1/lesson1/lessonpart3/example.html
