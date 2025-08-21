@@ -1,65 +1,43 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: HTML framework for PixiJS
-content: >+
-  To begin working with PixiJS, we need to create an HTML page that will serve
-  as the host for our PixiJS container. This HTML page acts as the foundation
-  for our game, providing the structure needed to render graphics and interact
-  with the PixiJS library.
-
+content: |+
+  To begin working with PixiJS, we need to create an HTML page that will serve as the host for our PixiJS container. This HTML page acts as the foundation for our game, providing the structure needed to render graphics and interact with the PixiJS library.
 
   ### Setting Up the HTML Page
 
+  1. **HTML Document Structure**: Start by creating a basic HTML document. This includes the `<!DOCTYPE html>` declaration, `<html>`, `<head>`, and `<body>` tags.&#x20;
 
-  1. **HTML Document Structure**: Start by creating a basic HTML document. This
-  includes the `<!DOCTYPE html>` declaration, `<html>`, `<head>`, and `<body>`
-  tags.&#x20;
-
-
-  2. **Including PixiJS**: In the `<body>` section, include the PixiJS library
-  by adding a `<script>` tag. You can use a CDN link to the latest version of
-  PixiJS, which allows you to easily access the library without downloading it.
-  **Note:** Often a library like this would go in the \`\<head>\` section, but
-  we're doing it a bit different here since we are not using a build system to
-  build our webpage before we put it online.
+  2. **Including PixiJS**: In the `<body>` section, include the PixiJS library by adding a `<script>` tag. You can use a CDN link to the latest version of PixiJS, which allows you to easily access the library without downloading it. **Note:** Often a library like this would go in the \`\<head>\` section, but we're doing it a bit different here since we are not using a build system to build our webpage before we put it online.
 
      ```html
      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.12.0/pixi.min.js"></script>
      ```
 
-  3. **Adding our script file:** After the PixiJS libraries are loaded, we need
-  to load our script file as well. Note that this is also added in the `<body>`
-  as it needs to come after the script for the library.
+  3. **Adding our script file:** After the PixiJS libraries are loaded, we need to load our script file as well. Note that this is also added in the `<body>` as it needs to come after the script for the library.
 
      ```html
      <script src="script.js"></script>
      ```
 
+  4. **Adding a style file:** In general we won't need a lot of [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) styling on our page. CSS is used for styling HTML element and most of our work is just being drawn inside a single canvas element. However we will use a bit of styling to get our main game viewport centered in the screen. As such a styles.css file has been included in the project, and we'll need to add this line to the head section to include it.
+
+     ```html
+     <link rel="stylesheet" href="styles.css" />
+     ```
+
   ### Key Elements
 
+  * **File Setup:** The correct files for our web app have been created and linked in, moving forward we'll be editing these files (mainly script.js) to create our game.
 
-  * **Canvas Element**: The PixiJS application automatically creates a
-  `<canvas>` element, which is where all the rendering happens. This canvas is
-  appended to the HTML document, allowing you to see the graphics rendered by
-  PixiJS. Learn more about canvas
-  [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+  * **Canvas Element**: The PixiJS application automatically creates a `<canvas>` element, you don't have to manually add it to your HTML, which is where all the rendering happens. This canvas is appended to the HTML document, allowing you to see the graphics rendered by PixiJS. Learn more about `<canvas>` [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
+  <br />
 
-  * **JavaScript Initialization**: The JavaScript code initializes the PixiJS
-  application, setting the dimensions and background color of the canvas. This
-  is where you will later add game objects and handle rendering logic.
-
-
-  By setting up this HTML page, you establish the groundwork for your PixiJS
-  game, enabling you to start adding and manipulating game elements in
-  subsequent lessons.
-
+  By setting up this HTML page, you establish the groundwork for your PixiJS game, enabling you to start adding and manipulating game elements in subsequent lessons.
 
   > \[!NOTE]
-
-  > From this point on we'll be carrying the same index.html and script files
-  from lesson part to lesson part, so you can keep building by adding to the
-  file
+  > From this point on we'll be carrying the same index.html, style and script files from lesson part to lesson part, so you can keep building by adding to the files
 
 showEditor: true
 editors:
