@@ -44,3 +44,23 @@ editors:
   - course1/index.html
   - course1/script.js
   - course1/styles.css
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: What is the styles.css document used for?
+        options:
+          - id: "1"
+            value: To style the HTML elements and center the game viewport on the screen.
+            explanation: The styles.css file is used for styling HTML elements, particularly
+              to center the game viewport.
+            isCorrect: true
+          - id: "2"
+            value: To load the PixiJS library into the HTML page.
+            explanation: The PixiJS library is loaded using a script tag, not the styles.css
+              file.
+          - id: "3"
+            value: To create and render game objects using PixiJS.
+            explanation: Game objects are created and rendered using JavaScript and PixiJS,
+              not CSS.
