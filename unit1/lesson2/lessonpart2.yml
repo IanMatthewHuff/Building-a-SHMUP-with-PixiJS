@@ -46,7 +46,7 @@ content: >
   PixiJS will add is told to use block display inside the body.
 
 
-  > [NOTE!]
+  > \[NOTE!]
 
   > Try tweaking the values in the background: property to see the background
   color of the document change in the HTML preview. I'm partial to a nice 90's
