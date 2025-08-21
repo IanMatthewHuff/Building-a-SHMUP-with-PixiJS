@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: unit3
+title: Sprites and movement
+description: In this unit we will take our basic game setup from the previous
+  section and add in actual game elements such as displaying our ship and moving
+  it around the screen. We'll also learn how the update loop works in PixiJS
+objectives: |-
+  - Understand how the PixiJS update look works
+  - Learn how to display a sprite on the screen
+  - Move that sprite with the keyboard
+lessons:
+  - lesson1/index.yml
