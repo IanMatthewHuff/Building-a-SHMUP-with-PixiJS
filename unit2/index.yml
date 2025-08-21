@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: unit2
+title: Next Steps
+description: Learn more about how to share your project, and about some cool
+  additions that you could make.
+objectives: |-
+  - Learn some interesting additions that you could make to your project
+  - Learn ways to help organize your code better
+  - Learn how to publish custom images to use with your project
+  - Learn how to share your project online
+lessons:
+  - lesson1/index.yml
+  - lesson2/index.yml

@@ -77,3 +77,4 @@ files:
       </html>
 units:
   - unit1/index.yml
+  - unit2/index.yml
