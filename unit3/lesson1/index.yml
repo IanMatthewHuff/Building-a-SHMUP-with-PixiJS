@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lesson1
-title: Lesson
+title: Game updating
+description: Learn how the PixiJS update loop works
+objectives: "- Understand how the PixiJS update loop works and why it's important"
 lessonParts:
   - lessonpart1.yml

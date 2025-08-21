@@ -9,4 +9,5 @@ objectives: |-
   - Learn how to display a sprite on the screen
   - Move that sprite with the keyboard
 lessons:
+  - lesson2/index.yml
   - lesson1/index.yml

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lesson2
+title: Displaying a sprite
+description: This lesson will teach how to load a sprite in PixiJS and then how
+  to display and position it on the screen
+objectives: |-
+  - Learn how to load a sprite in PixiJS
+  - Learn how to display a sprite on screen
+lessonParts:
+  - lessonpart1.yml
