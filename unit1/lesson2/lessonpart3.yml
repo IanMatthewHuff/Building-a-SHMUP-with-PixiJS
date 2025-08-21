@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart3
 title: Handling resizing
-content: >
+content: >+
   Our PixiJS canvas is on screen, but it looks a little...small? And what will
   happen when the browser size of our screen changes? Let's handle this by
   adding code to our script for resizing the game canvas.
@@ -69,3 +69,22 @@ content: >
 
 
   ### Crispy Pixels?
+
+
+  Retro video games are great, but if you've every played something like an old
+  Nintendo game on a modern TV you might notice that taking pixel art and
+  scaling it up to an arbitrary resolution can sometimes look a bit smeary and
+  not as crisp as it should be. This will be the case for our project as we are
+  scaling up low resolution art work to arbitrary higher sizes. There are [some
+  ways to deal with
+  this](https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms) but for now
+  we can just tweak one small setting to improve things a bit. In our
+  `styles.css` file add the following line into the `<canvas>` block.
+
+
+  ```css
+
+  image-rendering: pixelated;
+
+  ```
+
