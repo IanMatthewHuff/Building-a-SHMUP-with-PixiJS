@@ -11,3 +11,4 @@ objectives: |-
   - Understand the relationship between stage and display objects
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml

@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart2
+title: Initializing our viewport
+content: >
+  The first step that we'll need to take here is to create the display area that
+  we will draw our game in.
+
+
+  With a video game it's important to have a set height to width ratio, also
+  known as an aspect ratio, to make sure that our game graphics are not
+  stretched out, and that we can see all of the screen area.
+
+
+  ### Centering our viewport
+
+
+  The first step that we'll take is to center our viewport in the window. This
+  process involves a small bit of CSS styling with our styles.css file. Try
+  taking this code block here and adding it `styles.css`.
+
+
+  ```css
+
+  body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+  }
+
+  canvas {
+      display: block;
+  }
+
+  ```
+
+
+  This code tells the main body of the HTML document to see its background to
+  black `background: #000`, to align content inside it to the center
+  `justify-content:center`, to take up all of the vertical height `min-height:
+  100vh`, and to remove margin and padding. Then the `<canvas>` element that
+  PixiJS will add is told to use block display inside the body.
+
+
+  > [NOTE!]
+
+  > Try tweaking the values in the background: property to see the background
+  color of the document change in the HTML preview. I'm partial to a nice 90's
+  magenta (#f46fde) myself.
+
+
+  ### Setting our aspect ratio
+
+
+  ### Initializing our canvas
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
