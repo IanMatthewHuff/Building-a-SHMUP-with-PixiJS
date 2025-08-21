@@ -9,7 +9,25 @@ contacts:
     pictureUrl: https://avatars.githubusercontent.com/u/812783?v=4
     homePageUrl: https://github.com/IanMatthewHuff
 files:
-  - path: course1/unit1/lesson1/lessonpart3/example.html
+  - path: course1/unit1/lesson1/lessonpart4/script.js
+    content: >-
+      let count = 0;
+
+
+      document.getElementById('clickButton').addEventListener('click',
+      function() {
+          count++;
+          //count++;
+          document.getElementById('counter').textContent = count;
+      });
+
+
+      document.getElementById('resetButton').addEventListener('click',
+      function() {
+          count = 0;
+          document.getElementById('counter').textContent = count;
+      });
+  - path: course1/unit1/lesson1/lessonpart3/index.html
     content: >-
       <!DOCTYPE html>
 
@@ -28,6 +46,34 @@ files:
           <p>Try editing the text: [HERE] to see it change in the preview window</p>
       </body>
 
+      </html>
+  - path: course1/unit1/lesson1/lessonpart4/index.html
+    content: |-
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Button Counter</title>
+      </head>
+      <body>
+          <h1>Click Counter</h1>
+          <p>Count: <span id="counter">0</span></p>
+          <button id="clickButton">Click Me</button>
+          <button id="resetButton">Reset</button>
+          
+          <script src="script.js"></script>
+      </body>
+      </html>
+  - path: course1/index.html
+    content: |-
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Our PixiJS Game</title>
+      </head>
+      <body>
+      </body>
       </html>
 units:
   - unit1/index.yml

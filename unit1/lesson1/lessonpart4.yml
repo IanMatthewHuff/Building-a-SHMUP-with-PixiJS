@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart4
+title: JavaScript in VS Code for Education
+content: >+
+  HTML provides the static layout for your webpage, but to actually make things
+  happen you need JavaScript running behind the scenes. For our PixiJS coding
+  the HTML is just going to be a very minimal layout to host PixiJS and
+  basically all the work is going to be happening in JavaScript (JS) files. 
+
+
+  When working with JS file in VS Code for Education, the files will show up to
+  the right of the course content. As you make JS changes the HTML Preview
+  window will automatically update with your changes if open.
+
+
+  With the HTML Preview window open try uncommenting (removing the "//") in the
+  code file. Then when you click the button it should start counting up by two.
+
+
+  > \[!NOTE]
+
+  > You can't run a JS file directly, so to launch the HTML Preview, you need to
+  do so from an HTML file
+
+showEditor: true
+editors:
+  - course1/unit1/lesson1/lessonpart4/script.js
+  - course1/unit1/lesson1/lessonpart4/index.html
