@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart3
+title: Handling resizing
+content: >
+  Our PixiJS canvas is on screen, but it looks a little...small? And what will
+  happen when the browser size of our screen changes? Let's handle this by
+  adding code to our script for resizing the game canvas.
+
+
+  > \[!NOTE]
+
+  > We're going to be resizing the game display canvas here, not the actual size
+  of the internal game engine. The game engine will continue to run at our
+  smaller retro game resolution, but we're going to scale up the final output
+  resolution while maintaining the aspect ratio to avoid stretching. An
+  important distinction to remember as our positioning calculations for object
+  will all be in the game engine resolution.
+
+
+  ### Handling resizes
+
+
+  Inside our `initGame` function we're going to add a new function to handle
+  resizing. You don't need to worry about all the math here if you don't want,
+  but suffice to say it's going to look to take as much vertical space as the
+  window gives it, while maintaining our 3/4 display ratio. This code needs to
+  be added inside and add the end of the initGame code.
+
+
+  ```javascript
+     function resizeCanvas() {
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+          const windowRatio = windowWidth / windowHeight;
+          
+          let newWidth, newHeight;
+          
+          if (windowRatio > ASPECT_RATIO) {
+              newHeight = windowHeight;
+              newWidth = newHeight * ASPECT_RATIO;
+          } else {
+              newWidth = windowWidth;
+              newHeight = newWidth / ASPECT_RATIO;
+          }
+          
+          app.canvas.style.width = newWidth + 'px';
+          app.canvas.style.height = newHeight + 'px';
+      }
+  ```
+
+
+  ### Triggering the resize
+
+
+  This function handles resizing, but when do we actually run this function to
+  do the resize? The answer is wonderfully simple. We just run it once to pick
+  up the initial sizing, then we run it whenever we detect the web browser
+  resizes. One of the very helpful things about running our game in a browser.
+  To do this, we'll hook up our function to run when the [resize
+  event](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event)
+  on the window is triggered. Below our `resizeCanvas` function, but still
+  inside `initGame` just add this code.
+
+
+  ```javascript
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+  ```
+
+
+  ### Crispy Pixels?
