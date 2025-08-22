@@ -8,3 +8,4 @@ objectives: |-
   - Learn how to display a sprite on screen
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml

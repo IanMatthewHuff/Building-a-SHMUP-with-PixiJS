@@ -23,7 +23,7 @@ content: |
 
   ### Textures? Sprites?
 
-  Some of the terms that we are using here might be a bit confusing. Why are we loading into a texture instead of something like an image or png? And what's a sprite? For a texture, [it has more meaning when we get into 3D graphics](https://en.wikipedia.org/wiki/Texture_mapping), but for now simply considering it an image that's been processed by the engine and is ready to use is a solid approximation. As for a [sprite](https://en.wikipedia.org/wiki/Sprite_\(computer_graphics\)), that term referred to graphical elements that moved dynamically on top of background images in early video game programming. Anything in our game that's moving around, the player ship, enemies, projectiles, will all be Sp
+  Some of the terms that we are using here might be a bit confusing. Why are we loading into a texture instead of something like an image or png? And what's a sprite? For a texture, [it has more meaning when we get into 3D graphics](https://en.wikipedia.org/wiki/Texture_mapping), but for now simply considering it an image that's been processed by the engine and is ready to use is a solid approximation. As for a [sprite](https://en.wikipedia.org/wiki/Sprite_\(computer_graphics\)), that term referred to graphical elements that moved dynamically on top of background images in early video game programming. Anything in our game that's moving around, the player ship, enemies, projectiles, will all be sprites.
 showEditor: true
 editors:
   - course1/index.html
