@@ -1,4 +1,31 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: Loading a sprite
-content: Enter your content here
+content: |
+  With the boring setup bits out of the way it's time to actually get something drawing on the screen! For the purpose of this course sample images have been provided for you to use. This lets you get right into focusing on the PixiJS coding parts, but we do have a section in "Next Steps" that shows you how to create and upload custom images to use for your game. 
+
+  ### Loading an image
+
+  Before we can create a Sprite we need to make the PixiJS aware of the image. To do this, we'll use the [Assets](https://pixijs.download/release/docs/assets.Assets.html) to load the image from a web URL into a texture that the Sprite can use. Simple as this.
+
+  ```javascript
+      // Set our base path for loading assets
+      await PIXI.Assets.init({
+          basePath: 'https://raw.githubusercontent.com/IanMatthewHuff/PixiJSAssets/refs/heads/main'
+      });
+
+      // Load our ship sprite
+      const texture = await PIXI.Assets.load("player-ship.png");
+      const ship = new PIXI.Sprite(texture);
+  ```
+
+  What's up with that odd basePath in the init call? That site is the site where the assets for this sample game are stored, by putting that in the basePath we can just call load with `player-ship.png` instead of `https://raw.githubusercontent.com/IanMatthewHuff/PixiJSAssets/refs/heads/main/player-ship.png`. Pretty handy!
+
+  ### Textures? Sprites?
+
+  Some of the terms that we are using here might be a bit confusing. Why are we loading into a texture instead of something like an image or png? And what's a sprite? For a texture, [it has more meaning when we get into 3D graphics](https://en.wikipedia.org/wiki/Texture_mapping), but for now simply considering it an image that's been processed by the engine and is ready to use is a solid approximation. As for a [sprite](https://en.wikipedia.org/wiki/Sprite_\(computer_graphics\)), that term referred to graphical elements that moved dynamically on top of background images in early video game programming. Anything in our game that's moving around, the player ship, enemies, projectiles, will all be Sp
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
