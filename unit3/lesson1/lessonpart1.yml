@@ -20,3 +20,34 @@ content: >
   faster the game update loop is running the more responsive the game feels and
   the smoother the animations look, 60 FPS is considered a bit of gold standard
   for games, while dropping under 30 FPS can start to feel laggy and jittery.
+
+
+  ### Sample game update loop
+
+
+  ```mermaid
+
+  flowchart TD
+      A[Game Starts] --> B[Initialize Game State]
+      B --> C{Game Running?}
+      C -->|No| Z[Game Ends]
+      C -->|Yes| D[Process Input]
+      D --> E[Update Game Logic]
+      E --> F[Update Physics]
+      F --> G[Update Animations]
+      G --> H[Render/Draw Frame]
+      H --> I[Display Frame to Screen]
+      I --> J[Wait for Next Frame<br/>~16.67ms for 60 FPS]
+      J --> C
+      
+      style A fill:#e1f5fe
+      style Z fill:#ffebee
+      style C fill:#fff3e0
+      style D fill:#e8f5e8
+      style E fill:#e8f5e8
+      style F fill:#e8f5e8
+      style G fill:#e8f5e8
+      style H fill:#f3e5f5
+      style I fill:#f3e5f5
+      style J fill:#fce4ec
+  ```
