@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: Game update loops
-content: |
-  TBD
+content: >+
+  Sure we have a ship on the screen, but with nothing moving, it's not a very
+  exciting game.
+
+
+  ### Game update loops
+
