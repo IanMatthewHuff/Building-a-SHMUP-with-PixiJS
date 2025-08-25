@@ -1,10 +1,22 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: Game update loops
-content: >+
+content: >
   Sure we have a ship on the screen, but with nothing moving, it's not a very
   exciting game.
 
 
   ### Game update loops
 
+
+  Many applications and websites run in a way that the users hits a key or
+  presses a button, then the UI updates, then it goes back to waiting for the
+  next user input. But this doesn't work for something like a video game. Video
+  games need to be updating all the time, enemies are moving, sprites are
+  animating, scores are updating. So video game all run on a game update loop,
+  where the game state is continually changing, and the graphics are continually
+  redrawn on screen. When you hear about games running at 60 FPS (Frames Per
+  Second) they are referring to how fast the game update loop is running. The
+  faster the game update loop is running the more responsive the game feels and
+  the smoother the animations look, 60 FPS is considered a bit of gold standard
+  for games, while dropping under 30 FPS can start to feel laggy and jittery.
