@@ -39,15 +39,4 @@ content: >
       H --> I[Display Frame to Screen]
       I --> J[Wait for Next Frame<br/>~16.67ms for 60 FPS]
       J --> C
-      
-      style A fill:#e1f5fe
-      style Z fill:#ffebee
-      style C fill:#fff3e0
-      style D fill:#e8f5e8
-      style E fill:#e8f5e8
-      style F fill:#e8f5e8
-      style G fill:#e8f5e8
-      style H fill:#f3e5f5
-      style I fill:#f3e5f5
-      style J fill:#fce4ec
   ```
