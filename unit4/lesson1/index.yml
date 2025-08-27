@@ -8,3 +8,4 @@ objectives: |-
   - Move enemies on the screen
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml
