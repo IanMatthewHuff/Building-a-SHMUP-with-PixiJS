@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: unit4
+title: Enemies and collisions
+description: Learn how to add enemies to your game, as well as handling
+  collisions between players, enemies and projectiles.
+objectives: |-
+  - Learn how to add new enemy sprites
+  - Learn how to spawn projectiles
+  - Learn how to detect and handle collisions between sprites
+lessons:
+  - lesson1/index.yml
