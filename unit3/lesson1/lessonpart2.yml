@@ -42,3 +42,8 @@ content: >
 
 
   Now you should see the ship start to rotate in the preview
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
