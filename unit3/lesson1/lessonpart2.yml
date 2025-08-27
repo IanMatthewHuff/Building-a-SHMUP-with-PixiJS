@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart2
+title: PixiJS update loop
+content: >
+  Now that we learned what a game update loop is, we need to apply that
+  knowledge to PixiJS in particular.
+
+
+  ### Ticker
+
+
+  For PixiJS timing the
+  [Ticker](https://pixijs.download/release/docs/ticker.Ticker.html) class is
+  what we use for controlling game update timing. If you look at the
+  documentation more there is lot of flexibility with controlling multiple
+  different tickers for various animation and game update functions. But for now
+  we can stick with just using the ticker built into the game App that we
+  already created.
+
+
+  Lets add an update function to the main Ticker of our game:
+
+
+  ```javascript
+      // Hook up our update function
+      function update() {
+      }
+      app.ticker.add(update);
+  ```
+
+
+  Seems like nothing happened with that change? That's because we've hooked up
+  an update function that's not changing anything. To have something actually
+  happen here, go ahead and add a line like this to the update function body.
+
+
+  ```javascript
+
+  ship.rotation += .1;
+
+  ```
+
+
+  Now you should see the ship start to rotate in the preview

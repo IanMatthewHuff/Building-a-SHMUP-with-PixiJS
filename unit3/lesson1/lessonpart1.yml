@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
-title: Game update loops
-content: >
+title: 🔁 Game update loops
+content: >+
   Sure we have a ship on the screen, but with nothing moving, it's not a very
   exciting game.
 
@@ -40,3 +40,4 @@ content: >
       I --> J[Wait for Next Frame<br/>~16.67ms for 60 FPS]
       J --> C
   ```
+

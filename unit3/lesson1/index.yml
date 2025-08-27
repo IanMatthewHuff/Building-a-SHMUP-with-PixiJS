@@ -5,3 +5,5 @@ description: Learn how the PixiJS update loop works
 objectives: "- Understand how the PixiJS update loop works and why it's important"
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml
+  - lessonpart3.yml
