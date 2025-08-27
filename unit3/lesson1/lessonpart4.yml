@@ -59,6 +59,13 @@ content: >+
   pressing the arrow keys we'll finally get some action on screen.
 
 
+  > \[!NOTE]
+
+  > The HTML preview won't load if your HTML code is broken, so if you are
+  making some major changes, it can be helpful to close the preview until you
+  are back in a running state
+
+
   ### Watching our bounds
 
 
