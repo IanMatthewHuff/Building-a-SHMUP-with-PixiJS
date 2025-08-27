@@ -45,7 +45,8 @@ content: |+
 
   Now if you click on the HTML Preview window to select it (your keypresses won't be detected if the window is not the active VS Code window) and start pressing the arrow keys we'll finally get some action on screen.
 
-  > \[!NOTE] We added the variable shipSpeed to control how fast the ship moves. Feel free to play around with that value a bit to see what speed feels best to you, try speeding it up to ten or slowing it down to .5.
+  > \[!NOTE]
+  > We added the variable shipSpeed to control how fast the ship moves. Feel free to play around with that value a bit to see what speed feels best to you, try speeding it up to ten or slowing it down to .5.
 
   ### Watching our bounds
 
