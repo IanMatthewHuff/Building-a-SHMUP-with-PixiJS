@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lesson1
-title: Lesson
+title: Adding enemies
+description: Add enemies sprites for our player to shoot at
+objectives: |-
+  - Load enemy sprites
+  - Position enemies on the screen
+  - Move enemies on the screen
 lessonParts:
   - lessonpart1.yml
