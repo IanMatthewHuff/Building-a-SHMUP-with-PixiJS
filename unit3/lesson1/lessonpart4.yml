@@ -1,0 +1,78 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart4
+title: TESTNODE
+content: |+
+  Enter your content here
+
+  A game with a ship automatically rotating in a circle doesn't seem like much fun, so let's change it so that we're actually controlling the ships movement around the game field.
+
+  ### Moving with the keyboard
+
+  For picking up what keys are pressed we use basic browser functionality not specific to PixiJS. After the code to move your sprite to the center of the screen add the following code.
+
+  ```javascript
+      // Handle keyboard input
+      const keys = {};
+      window.addEventListener('keydown', (e) => {
+          keys[e.code] = true;
+      });
+      window.addEventListener('keyup', (e) => {
+          keys[e.code] = false;
+      });
+  ```
+
+  This uses [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on the browser window to get an event every time that a key is pressed down, or lifted up. When that happens the `keys` dictionary logs true if that key is currently pressed and false (or undefined) if it's not currently presses. After we've done that, we can look at that `keys` dictionary in our update function and adjust the position of our ship. Try replacing the existing update function with the following.
+
+  ```javascript
+      // Set the speed that our ship moves at
+      const shipSpeed = 2;
+
+      // Hook up our update function
+      function update() {
+          // Check for arrow key presses and move the ship
+          if (keys['ArrowLeft']) {
+              ship.x -= shipSpeed;
+          }
+          if (keys['ArrowRight']) {
+              ship.x += shipSpeed;
+          }
+          if (keys['ArrowUp']) {
+              ship.y -= shipSpeed;
+          }
+          if (keys['ArrowDown']) {
+              ship.y += shipSpeed;
+          }
+      }
+  ```
+
+  Now if you click on the HTML Preview window to select it (your keypresses won't be detected if the window is not the active VS Code window) and start pressing the arrow keys we'll finally get some action on screen.
+
+  > \[!NOTE] We added the variable shipSpeed to control how fast the ship moves. Feel free to play around with that value a bit to see what speed feels best to you, try speeding it up to ten or slowing it down to .5.
+
+  ### Watching our bounds
+
+  If you play around a bit with the ship you might notice a pretty big issue, you can easily send the ship off of the bound of the game screen, something that we don't want to have happen. In our update function below the movement code we can add some code to prevent our ship from leaving the bounds of the screen.
+
+  ```javascript
+          // Keep the ship within the game bounds (accounting for 32x32 sprite size)
+          const halfShipWidth = 16;  // Half of 32 pixels
+          const halfShipHeight = 16; // Half of 32 pixels
+          
+          // Left boundary
+          if (ship.x < halfShipWidth) {
+              ship.x = halfShipWidth;
+          }
+          // Right boundary
+          if (ship.x > GAME_WIDTH - halfShipWidth) {
+              ship.x = GAME_WIDTH - halfShipWidth;
+          }
+          // Top boundary
+          if (ship.y < halfShipHeight) {
+              ship.y = halfShipHeight;
+          }
+          // Bottom boundary
+          if (ship.y > GAME_HEIGHT - halfShipHeight) {
+              ship.y = GAME_HEIGHT - halfShipHeight;
+          }
+  ```
+
