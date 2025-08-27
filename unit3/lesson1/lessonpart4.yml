@@ -11,14 +11,6 @@ content: |+
   For picking up what keys are pressed we use basic browser functionality not specific to PixiJS. After the code to move your sprite to the center of the screen add the following code.
 
   ```javascript
-      // Handle keyboard input
-      const keys = {};
-      window.addEventListener('keydown', (e) => {
-          keys[e.code] = true;
-      });
-      window.addEventListener('keyup', (e) => {
-          keys[e.code] = false;
-      });
   ```
 
   This uses [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on the browser window to get an event every time that a key is pressed down, or lifted up. When that happens the `keys` dictionary logs true if that key is currently pressed and false (or undefined) if it's not currently presses. After we've done that, we can look at that `keys` dictionary in our update function and adjust the position of our ship. Try replacing the existing update function with the following.
