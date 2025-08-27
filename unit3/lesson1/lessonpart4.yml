@@ -59,11 +59,6 @@ content: >+
   pressing the arrow keys we'll finally get some action on screen.
 
 
-  > \[!NOTE] We added the variable shipSpeed to control how fast the ship moves.
-  Feel free to play around with that value a bit to see what speed feels best to
-  you, try speeding it up to ten or slowing it down to .5.
-
-
   ### Watching our bounds
 
 
