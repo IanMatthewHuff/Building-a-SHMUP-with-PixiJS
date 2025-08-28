@@ -2,7 +2,7 @@
 id: lessonpart2
 title: 🖼️ Initializing our viewport
 content: |+
-  The first step that we'll need to take here is to create the display area, or viewpor that we will draw our game in.
+  The first step that we'll need to take here is to create the display area, or viewport that we will draw our game in.
 
   ### Centering our viewport
 

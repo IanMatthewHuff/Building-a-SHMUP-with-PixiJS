@@ -1,3 +1,105 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
-title: Page
+title: Projectiles
+content: >
+  Waves of enemies attacking us isn't very fun if we don't have a way to fight
+  back! Our next step will be to let our ship fire back at the enemy.
+
+
+  ### Spawning Projectiles
+
+
+  This  is going to be similar to how we added enemy spawning, except that we'll
+  be spawning projectiles from the location of our ship and having them move up
+  the screen. Up where we loaded our enemy texture and created the enemy array
+  add in the same for our player shots.
+
+
+  ```javascript
+      // Load player shots
+      const shotTexture = await PIXI.Assets.load("player-shot.png");
+      const shots = [];
+  ```
+
+
+  Next, at the location where we keep all our speed and spawning constants.
+
+
+  ```javascript
+      const shotSpeed = 5;
+      const fireRate = 120; // Frames between shots (lower = faster)
+      let lastShotFrame = 0;
+  ```
+
+
+  These values will track how fast our shots move and control the rate that we
+  can fire them at. Just like with `spawnEnemy` we'll add our own reusable
+  function to use for shooting a projectile. This can be placed above or below
+  the `spawnEnemy` function to keep our spawning function in the same 
+
+
+  ```javascript
+      // Function to shoot a projectile
+      function shootProjectile() {
+          const shot = new PIXI.Sprite(shotTexture);
+          shot.anchor.set(0.5);
+          shot.x = ship.x;
+          shot.y = ship.y - 20; // Start slightly above the ship
+          
+          app.stage.addChild(shot);
+          shots.push(shot);
+      }
+  ```
+
+
+  ### Firing the shot
+
+
+  We've added the sprite and the function to fire a projectile. Now we need to
+  make some additions to the \`update function to handle the keypress for firing
+  the shot and moving the active projectiles. First off is the keypress for
+  firing the shot.
+
+
+  ```javascript
+          // Handle shooting with space key and fire rate control
+          if (keys['Space'] && app.ticker.lastTime - lastShotFrame >= fireRate) {
+              shootProjectile();
+              lastShotFrame = app.ticker.lastTime;
+          }
+  ```
+
+
+  The ticker class in PixiJS keeps a
+  [lastTime](https://pixijs.download/release/docs/ticker.html#timing-properties)
+  property that tracks the last time that the update function ran. Here we use
+  that value to track if we've waited long enough, based on our fireRate value,
+  to trigger a new shot. Using the fire rate like this means that we don't have
+  to hammer on our firing button, we can just hold down the space button and our
+  ship will continue to fire at a reasonable rate. Some classic SHMUP games
+  allowed you to fire basically as fast as you could hit the button, but
+  realizing how this added an odd skill cap to getting the best scores, and how
+  hard it was on arcade machines many modern games now provide an autofire
+  option with set or adjustable fire rates.
+
+
+  After the shot triggering we need to move the projectiles up the screen.
+
+
+  ```javascript
+         // Move player shots upward
+          for (let i = shots.length - 1; i >= 0; i--) {
+              const shot = shots[i];
+              shot.y -= shotSpeed;
+              
+              // Remove shots that have moved off the top of the screen
+              if (shot.y < -16) {
+                  app.stage.removeChild(shot);
+                  shots.splice(i, 1);
+              }
+          }
+  ```
+
+
+  Just like with the enemies moving down, we need to remove these shots from the
+  stage when they fly off the top of the screen. Now we are getting somewhere
