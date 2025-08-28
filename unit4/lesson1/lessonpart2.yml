@@ -1,10 +1,93 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart2
 title: 🌊 Enemy waves
-content: >+
+content: >
   One enemy sitting right in front of your ship does not make for a very tense
   SHMUP game. What we want is for there to be lots of incoming enemies, moving
   down at the player. So our next step is to spawn waves of enemies from the top
   of the screen and move them down toward the player. The spawn enemy function
   that we've already made will be helpful for spawning more enemies on screen.
 
+
+  ### Spawning in update
+
+
+  First thing we'll do, at the same location that we added our shipSpeed
+  variable, add another variable for the speed of enemy ships and how likely
+  they are to spawn.
+
+
+  ```javascript
+    // Game settings
+    const shipSpeed = 3;
+    const enemySpeed = 2;
+    const enemySpawnRate = 0.02; // Chance to spawn enemy each frame (2%)
+  ```
+
+
+  Then inside of our `spawnEnemy` function we'll adjust it to position the enemy
+  ships at a random location along the top of the screen. Just remove the
+  current x and y positioning code and replace it with this.
+
+
+  ```javascript
+          // Random position across the top of the screen
+          enemy.x = Math.random() * GAME_WIDTH;
+          enemy.y = -16; // Start just above the screen (half sprite height)
+  ```
+
+
+  Then remove the call to `spawnEnemy` that is outside of the update loop and
+  instead call it inside the update loop. With this call we want to spawn
+  enemies at a certain random probability, and call put in a check to not spawn
+  too many at once if the odds go against us.
+
+
+  ```javascript
+          // Randomly spawn enemy ships
+          if (Math.random() < enemySpawnRate && enemies.length < 10) {
+              spawnEnemy();
+          }
+  ```
+
+
+  ### Moving enemies
+
+
+  After this update you might be surprised to see that enemies are totally
+  missing from the preview. Where did they go? If you look at the positioning
+  code that we added, you'll notice that we spawned the enemies just off the top
+  of the screen **AND** we don't move them at all, so our host of enemies is
+  currently lurking just out of sight in the fog of war. To keep things simple,
+  let's add some code to our `update` function after the random spawning to move
+  enemies down the screen. In addition to moving them down, those sprites would
+  happily stick around in our enemies array even after they had long exited the
+  bottom of the screen, so let's add code to remove them from the scene when
+  they go of the bottom.
+
+
+  ```javascript
+          // Move enemy ships downward
+          for (let i = enemies.length - 1; i >= 0; i--) {
+              const enemy = enemies[i];
+              enemy.y += enemySpeed;
+              
+              // Remove enemies that have moved off the bottom of the screen
+              if (enemy.y > GAME_HEIGHT + 16) {
+                  app.stage.removeChild(enemy);
+                  enemies.splice(i, 1);
+              }
+          }
+  ```
+
+
+  ### Deterministic vs random
+
+
+  An important gameplay note here, one of the best aspects of SHMUP games is
+  that they usually are *mostly*** **deterministic with spawning enemies. While
+  there are often some smaller random factors, how enemies spawn and move is
+  usually set for a level, and by playing a game more you can build up skills
+  for how you handle each wave. That's actually a great topic to include in a
+  follow up course, but for the purposes of our simple example we'll use much
+  simple random spawning and move
