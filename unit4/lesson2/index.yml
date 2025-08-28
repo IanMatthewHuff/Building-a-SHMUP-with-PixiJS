@@ -9,3 +9,4 @@ objectives: |-
   - Allow our ship to be destroyed by enemy ships
 lessonParts:
   - lessonpart1.yml
+  - lessonpart2.yml

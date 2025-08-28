@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart2
+title: 💥 Collisions
+content: |
+  We've got one final step before finishing off this first basic SHMUP. Right now there is stuff flying all over the screen, but nothing is actually happening when an enemy hits us or when a shot hits an enemy. 
+
+  ### AABB
+
+  No AABB is not a [famous Swedish pop band ](https://en.wikipedia.org/wiki/ABBA) instead, it's a fast and simple algorithm for basic 2D collision detection between two rectangles. You can read the details [here ](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection#aabb_vs._aabb)(just skip the Z axis part for 2D) if you want the nitty gritty. The important thing is that it's a fast, easy to understand algorithm for seeing if two rectangles intersect at all, so it's perfect for what we are doing here. We're going to be checking a lot of collisions, so lets go ahead and make this a reusable function that takes two PixiJS sprites and sees if they collide.
+
+  ```javascript
+      // Collision detection function
+      function checkCollision(sprite1, sprite2) {
+          // Get the bounding rectangles of both sprites
+          const bounds1 = sprite1.getBounds();
+          const bounds2 = sprite2.getBounds();
+          
+          // Check if rectangles overlap
+          return bounds1.x < bounds2.x + bounds2.width &&
+                 bounds1.x + bounds1.width > bounds2.x &&
+                 bounds1.y < bounds2.y + bounds2.height &&
+                 bounds1.y + bounds1.height > bounds2.y;
+      }
+  ```
+
+  ### Fighting back
+
+  Next in our `update` function, after we've moved the enemies and moved the projectiles (since we want to check collisions on the new positions) we're going to add a block of code to check if we have any projectile / enemy collisions. If we find any, we'll remove the projectile and the enemy and increment a score value by one. So up where we keep our main speed and spawning variables add this in.
+
+  ```javascript
+      let score = 0;
+  ```
+
+  And then in the update function after the movement code add in this slightly longer block.
+
+  ```javascript
+          // Check for collisions between shots and enemies
+          for (let i = shots.length - 1; i >= 0; i--) {
+              const shot = shots[i];
+              
+              for (let j = enemies.length - 1; j >= 0; j--) {
+                  const enemy = enemies[j];
+                  
+                  if (checkCollision(shot, enemy)) {
+                      // Remove the shot
+                      app.stage.removeChild(shot);
+                      shots.splice(i, 1);
+                      
+                      // Remove the enemy
+                      app.stage.removeChild(enemy);
+                      enemies.splice(j, 1);
+                      
+                      // Increment score
+                      score++;
+                      
+                      // Break out of enemy loop since this shot is gone
+                      break;
+                  }
+              }
+          }
+  ```
+
+  This is a double loop, so it's checking each shot against each enemy active in the scene. You'll notice that we start the loops from the end of the array and count backwards, this make it simpler to remove elements from the array without messing up the loops that we are in. When we get a hit here we remove both sprites from the stage and bump up our score.
+
+  ### Taking a hit
+
+  ### Hitboxes
