@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lesson2
+title: Projectiles and collisions
+description: In this lesson, we will learn to spawn projectiles to shoot back at
+  the enemies as well as handle collisions between ships and projectiles
+objectives: |-
+  - Allow our player to fire a projectile at the enemy ships
+  - Allow enemy ships to be destroyed by our projectiles
+  - Allow our ship to be destroyed by enemy ships
+lessonParts:
+  - lessonpart1.yml

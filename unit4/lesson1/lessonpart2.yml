@@ -32,7 +32,7 @@ content: >
 
   ```javascript
           // Random position across the top of the screen
-          enemy.x = Math.random() * GAME_WIDTH;
+          enemy.x = Math.floor(Math.random() * GAME_WIDTH);
           enemy.y = -16; // Start just above the screen (half sprite height)
   ```
 
@@ -90,4 +90,4 @@ content: >
   usually set for a level, and by playing a game more you can build up skills
   for how you handle each wave. That's actually a great topic to include in a
   follow up course, but for the purposes of our simple example we'll use much
-  simple random spawning and move
+  simple random spawning and movement.

@@ -9,3 +9,4 @@ objectives: |-
   - Learn how to detect and handle collisions between sprites
 lessons:
   - lesson1/index.yml
+  - lesson2/index.yml
