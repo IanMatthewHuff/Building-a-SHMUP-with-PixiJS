@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart4
+title: ☑️ Checkpoint 3
+content: >
+  Here is our third and final checkpoint for this project. If you want to get a
+  copy of the full working basic version of this game just copy over the HTML,
+  CSS, and Javascript files from this checkpoint.
