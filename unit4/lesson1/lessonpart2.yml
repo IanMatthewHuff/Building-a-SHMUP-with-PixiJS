@@ -91,3 +91,8 @@ content: >
   for how you handle each wave. That's actually a great topic to include in a
   follow up course, but for the purposes of our simple example we'll use much
   simple random spawning and movement.
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css

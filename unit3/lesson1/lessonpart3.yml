@@ -77,3 +77,8 @@ content: |+
           }
   ```
 
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
