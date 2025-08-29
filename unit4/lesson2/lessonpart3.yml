@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
+id: lessonpart3
+title: The final score
+content: >+
+  There are a number of next steps that we could take to expand and improve on
+  this project that are detailed in the section below.
+
+
+  > /\[!NOTE]
+
+  > Make sure to check out the section on "Publishing your game" to see how easy
+  it is to share your create with friends!
+
+
+  But for one final thing, let's actually show that score that we were keeping
+  track of on screen so you can see how well you are doing. We can add in a
+  PixiJS [Text](https://pixijs.download/release/docs/scene.Text.html) object
+  that, like a Sprite, can be added to the scene and updated. Add this code in
+  after where the sprites were initialized.
+
+
+  ```javascript
+      // Create score text
+      const scoreText = new PIXI.Text({
+          text: 'Score: 0',
+          style: {
+              fontFamily: 'Arial',
+              fontSize: 18,
+              fill: 0xffffff,
+              fontWeight: 'bold'
+          }
+      });
+      scoreText.x = 10;
+      scoreText.y = 10;
+      app.stage.addChild(scoreText);
+  ```
+
+
+  Below that, we can create a small helper function to update the score and call
+  it once to initialize it.
+
+
+  ```javascript
+      // Function to update the score display
+      function updateScoreDisplay() {
+          scoreText.text = `Score: ${score}`;
+      }
+
+      // Initialize score display
+      updateScoreDisplay();
+  ```
+
