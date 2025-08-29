@@ -35,3 +35,8 @@ content: |+
   > \[!NOTE]
   > Now is a great time to try playing around with some of the positioning values. Try changing the x and y of the ship, or rotating it with .rotation. Just be aware of the screen size as if you change things too much you might draw it off of the screen.
 
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
