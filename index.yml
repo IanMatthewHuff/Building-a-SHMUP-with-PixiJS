@@ -309,6 +309,329 @@ files:
           display: block;
           image-rendering: pixelated;
       }
+  - path: course1/unit4/lesson2/lessonpart4/index-checkpoint-3.html
+    content: >
+      <!DOCTYPE html>
+
+
+      <html>
+          <head>
+              <title>Our PixiJS Game</title>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link rel="stylesheet" href="styles.css" />
+          </head>
+
+          <body>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.12.0/pixi.js"></script>
+              <script src="script.js"></script>
+          </body>
+      </html>
+  - path: course1/unit4/lesson2/lessonpart4/script-checkpoint-3.js
+    content: >-
+      const GAME_WIDTH = 224;
+
+      const GAME_HEIGHT = 288;
+
+      const ASPECT_RATIO = GAME_WIDTH / GAME_HEIGHT;
+
+
+      async function initGame() {
+          const app = new PIXI.Application();
+          
+          await app.init({
+              width: GAME_WIDTH,
+              height: GAME_HEIGHT,
+              backgroundColor: 0x1099bb,
+          });
+          
+          document.body.appendChild(app.canvas);
+          function resizeCanvas() {
+              const windowWidth = window.innerWidth;
+              const windowHeight = window.innerHeight;
+              const windowRatio = windowWidth / windowHeight;
+              
+              let newWidth, newHeight;
+              
+              if (windowRatio > ASPECT_RATIO) {
+                  newHeight = windowHeight;
+                  newWidth = newHeight * ASPECT_RATIO;
+              } else {
+                  newWidth = windowWidth;
+                  newHeight = newWidth / ASPECT_RATIO;
+              }
+              
+              app.canvas.style.width = newWidth + 'px';
+              app.canvas.style.height = newHeight + 'px';
+          }
+          
+          resizeCanvas();
+          window.addEventListener('resize', resizeCanvas);
+
+          // Set our base path for loading assets
+          await PIXI.Assets.init({
+              basePath: 'https://raw.githubusercontent.com/IanMatthewHuff/PixiJSAssets/refs/heads/main'
+              //basePath: 'https://soothing-beguiling-movie-517.vscodeedu.app'
+          });
+
+          // Load our ship sprite
+          const texture = await PIXI.Assets.load("player-ship.png");
+          const ship = new PIXI.Sprite(texture);
+
+          // Load enemy ships
+          const enemyTexture = await PIXI.Assets.load("enemy-ship.png");
+          const enemies = [];
+
+          // Load player shots
+          const shotTexture = await PIXI.Assets.load("player-shot.png");
+          const shots = [];
+
+
+
+          // Add to stage
+          app.stage.addChild(ship);
+
+          // Center the sprite's anchor point
+          ship.anchor.set(0.5);
+
+          // Move the sprite to the center of the screen
+          ship.x = app.screen.width / 2;
+          ship.y = app.screen.height / 2;
+
+          // Handle keyboard input
+          const keys = {};
+          window.addEventListener('keydown', (e) => {
+              keys[e.code] = true;
+          });
+          window.addEventListener('keyup', (e) => {
+              keys[e.code] = false;
+          });
+
+          // Set the speed that our ship moves at
+          const shipSpeed = 3;
+          const enemySpeed = 2;
+          const enemySpawnRate = 0.02; // Chance to spawn enemy each frame (2%)
+          const shotSpeed = 5;
+          const fireRate = 120; // Frames between shots (lower = faster)
+          let lastShotFrame = 0;
+          let score = 0;
+
+          // Create score text
+          const scoreText = new PIXI.Text({
+              text: 'Score: 0',
+              style: {
+                  fontFamily: 'Courier New, monospace',
+                  fontSize: 14,
+                  fill: 0xffffff,
+                  fontWeight: 'bold'
+              },
+          });
+
+          scoreText.x = 10;
+          scoreText.y = 10;
+          app.stage.addChild(scoreText);
+
+          // Function to update the score display
+          function updateScoreDisplay() {
+              scoreText.text = `Score: ${score}`;
+          }
+
+          // Initialize score display
+          updateScoreDisplay();
+
+           // Function to spawn enemy ships
+          function spawnEnemy() {
+              const enemy = new PIXI.Sprite(enemyTexture);
+              enemy.anchor.set(0.5);
+              
+              // Random position across the top of the screen
+              enemy.x = Math.floor(Math.random() * GAME_WIDTH);
+              enemy.y = -16; // Start just above the screen (half sprite height)
+              
+              app.stage.addChild(enemy);
+              enemies.push(enemy);
+          }
+
+          // Function to shoot a projectile
+          function shootProjectile() {
+              const shot = new PIXI.Sprite(shotTexture);
+              shot.anchor.set(0.5);
+              shot.x = ship.x;
+              shot.y = ship.y - 20; // Start slightly above the ship
+              
+              app.stage.addChild(shot);
+              shots.push(shot);
+          }
+
+          // Collision detection function
+          function checkCollision(sprite1, sprite2) {
+              // Get the bounding rectangles of both sprites
+              const bounds1 = sprite1.getBounds();
+              const bounds2 = sprite2.getBounds();
+              
+              // Check if rectangles overlap
+              return bounds1.x < bounds2.x + bounds2.width &&
+                     bounds1.x + bounds1.width > bounds2.x &&
+                     bounds1.y < bounds2.y + bounds2.height &&
+                     bounds1.y + bounds1.height > bounds2.y;
+          }
+
+          // Hook up our update function
+          function update() {
+              // Randomly spawn enemy ships
+              if (Math.random() < enemySpawnRate && enemies.length < 10) {
+                  spawnEnemy();
+              }
+
+              // Move enemy ships downward
+              for (let i = enemies.length - 1; i >= 0; i--) {
+                  const enemy = enemies[i];
+                  enemy.y += enemySpeed;
+                  
+                  // Remove enemies that have moved off the bottom of the screen
+                  if (enemy.y > GAME_HEIGHT + 16) {
+                      app.stage.removeChild(enemy);
+                      enemies.splice(i, 1);
+                  }
+              }
+
+              // Handle shooting with space key and fire rate control
+              if (keys['Space'] && app.ticker.lastTime - lastShotFrame >= fireRate) {
+                  shootProjectile();
+                  lastShotFrame = app.ticker.lastTime;
+              }
+              
+              // Move player shots upward
+              for (let i = shots.length - 1; i >= 0; i--) {
+                  const shot = shots[i];
+                  shot.y -= shotSpeed;
+                  
+                  // Remove shots that have moved off the top of the screen
+                  if (shot.y < -16) {
+                      app.stage.removeChild(shot);
+                      shots.splice(i, 1);
+                  }
+              }
+
+              // Check for collisions between shots and enemies
+              for (let i = shots.length - 1; i >= 0; i--) {
+                  const shot = shots[i];
+                  
+                  for (let j = enemies.length - 1; j >= 0; j--) {
+                      const enemy = enemies[j];
+                      
+                      if (checkCollision(shot, enemy)) {
+                          // Remove the shot
+                          app.stage.removeChild(shot);
+                          shots.splice(i, 1);
+                          
+                          // Remove the enemy
+                          app.stage.removeChild(enemy);
+                          enemies.splice(j, 1);
+                          
+                          // Increment score
+                          score++;
+                          updateScoreDisplay();
+                          
+                          // Break out of enemy loop since this shot is gone
+                          break;
+                      }
+                  }
+              }
+
+              // Check for collisions between player and enemies
+              for (let i = enemies.length - 1; i >= 0; i--) {
+                  const enemy = enemies[i];
+                  
+                  if (checkCollision(ship, enemy)) {
+                      // Clear all enemies
+                      for (let j = enemies.length - 1; j >= 0; j--) {
+                          app.stage.removeChild(enemies[j]);
+                      }
+                      enemies.length = 0; // Clear the array
+                      
+                      // Clear all shots
+                      for (let k = shots.length - 1; k >= 0; k--) {
+                          app.stage.removeChild(shots[k]);
+                      }
+                      shots.length = 0; // Clear the array
+                      
+                      // Reset player position
+                      ship.x = app.screen.width / 2;
+                      ship.y = app.screen.height / 2;
+                      
+                      // Reset score
+                      score = 0;
+                      updateScoreDisplay();
+                      
+                      // Break out of enemy loop since we've reset everything
+                      break;
+                  }
+              }
+
+              // Check for arrow key presses and move the ship
+              if (keys['ArrowLeft']) {
+                  ship.x -= shipSpeed;
+              }
+              if (keys['ArrowRight']) {
+                  ship.x += shipSpeed;
+              }
+              if (keys['ArrowUp']) {
+                  ship.y -= shipSpeed;
+              }
+              if (keys['ArrowDown']) {
+                  ship.y += shipSpeed;
+              }
+
+              // Keep the ship within the game bounds (accounting for 32x32 sprite size)
+              const halfShipWidth = 16;  // Half of 32 pixels
+              const halfShipHeight = 16; // Half of 32 pixels
+              
+              // Left boundary
+              if (ship.x < halfShipWidth) {
+                  ship.x = halfShipWidth;
+              }
+              // Right boundary
+              if (ship.x > GAME_WIDTH - halfShipWidth) {
+                  ship.x = GAME_WIDTH - halfShipWidth;
+              }
+              // Top boundary
+              if (ship.y < halfShipHeight) {
+                  ship.y = halfShipHeight;
+              }
+              // Bottom boundary
+              if (ship.y > GAME_HEIGHT - halfShipHeight) {
+                  ship.y = GAME_HEIGHT - halfShipHeight;
+              }
+          }
+          app.ticker.add(update);
+      }
+
+
+      // Wait for DOM to be ready, then initialize the game
+
+      if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initGame);
+      } else {
+          initGame();
+      }
+  - path: course1/unit4/lesson2/lessonpart4/styles-checkpoint-3.css
+    content: |-
+      /* Add CSS styles for your web site here and use them in index.html. */
+      body {
+          margin: 0;
+          padding: 0;
+          background: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          overflow: hidden;
+      }
+      canvas {
+          display: block;
+          image-rendering: pixelated;
+      }
 units:
   - unit1/index.yml
   - unit3/index.yml

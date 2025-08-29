@@ -5,3 +5,11 @@ content: >
   Here is our third and final checkpoint for this project. If you want to get a
   copy of the full working basic version of this game just copy over the HTML,
   CSS, and Javascript files from this checkpoint.
+showEditor: true
+editors:
+  - course1/index.html
+  - course1/script.js
+  - course1/styles.css
+  - course1/unit4/lesson2/lessonpart4/index-checkpoint-3.html
+  - course1/unit4/lesson2/lessonpart4/script-checkpoint-3.js
+  - course1/unit4/lesson2/lessonpart4/styles-checkpoint-3.css
