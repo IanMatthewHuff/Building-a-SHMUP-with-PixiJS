@@ -29,9 +29,9 @@ questionGroups:
         content: Which of these is not a SHMUP game title?
         options:
           - id: "1"
-            value: Gradius
+            value: Galaga
             isCorrect: true
           - id: "2"
-            value: Space Lazers
+            value: Mage Space Lazers
           - id: "3"
             value: DoDonPachi
