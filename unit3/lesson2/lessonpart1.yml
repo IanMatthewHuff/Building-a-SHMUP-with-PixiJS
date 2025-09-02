@@ -29,3 +29,18 @@ editors:
   - course1/index.html
   - course1/script.js
   - course1/styles.css
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: A graphical element that moves on top of a background image is know as
+          a what?
+        options:
+          - id: "1"
+            value: PNG
+            isCorrect: true
+          - id: "2"
+            value: Sprite
+          - id: "3"
+            value: Texture
