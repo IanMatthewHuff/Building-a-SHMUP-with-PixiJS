@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart2
 title: Organizing your code
-content: |
-  TBD
+content: >
+  As you build bigger and bigger games, especially when following along with a
+  course like this adding chunks of code, you may realized that there are areas
+  of your code that, while they work fine, can be hard to read, and difficult to
+  add new changes to. This is where the process of
+  [refactoring](https://en.wikipedia.org/wiki/Code_refactoring) comes into play,
+  and it's super important for both games and just programming in general.
