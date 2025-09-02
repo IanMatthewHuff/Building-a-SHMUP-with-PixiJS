@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart3
 title: Expanding the gameplay
-content: |
+content: |+
   Here are a few interesting ways you could consider expanding the gameplay of this game.
 
   ### Set level design
@@ -20,4 +20,5 @@ content: |
 
   Some SHMUPs just have you work with a single basic shot, but many of them include a limited supply of screen clearing bombs that can help dig you out of a messy situation. And some go even further by providing multiple different weapon types, or as far as the Gradius series powerup bar, which allows you to collect generic power up points and lets you directly choose how you want to upgrade your ship.
 
-  <img src="https://1drv.ms/i/c/c67a0da9d67306d3/IQSoA0pPxy9HSZx0-771f9GoAVkl4dm7MBlmNEbeXvYuRwQ?width=660" width="660" height="auto" />
+  ![1.00](https://1drv.ms/i/c/c67a0da9d67306d3/IQSoA0pPxy9HSZx0-771f9GoAVkl4dm7MBlmNEbeXvYuRwQ?width=660)
+
