@@ -2,4 +2,22 @@
 id: lessonpart3
 title: Expanding the gameplay
 content: |
-  TBD
+  Here are a few interesting ways you could consider expanding the gameplay of this game.
+
+  ### Set level design
+
+  As mention in the Enemy waves lesson, high quality SHMUP design has very little randomness to it, players should be able to improve as they play more games, and not be subject to the whims of a random number generator. Instead of our random spawning of enemy waves, distinct levels can be created with set waves.
+
+  ### New enemy types
+
+  Right now there is one enemy type, and it doesn't shoot back at you. Adding different enemy types, as well as giving them the ability to shoot back at you would make our levels much more dynamic and interesting.
+
+  ### Boss battles
+
+  SHMUPs are characterized by massive bosses that spit waves of fire at you. Right now our game is sorely lacking in this area. At the end of our scheduled waves of enemies we can add a boss fight that provides an epic code to our game.
+
+  ### Powerups
+
+  Some SHMUPs just have you work with a single basic shot, but many of them include a limited supply of screen clearing bombs that can help dig you out of a messy situation. And some go even further by providing multiple different weapon types, or as far as the Gradius series powerup bar, which allows you to collect generic power up points and lets you directly choose how you want to upgrade your ship.
+
+  <img src="https://1drv.ms/i/c/c67a0da9d67306d3/IQSoA0pPxy9HSZx0-771f9GoAVkl4dm7MBlmNEbeXvYuRwQ?width=660" width="660" height="auto" />
