@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart3
-title: The final score
+title: 📊 The final score
 content: |+
   There are a number of next steps that we could take to expand and improve on this project that are detailed in the section below.
 
