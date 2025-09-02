@@ -632,6 +632,39 @@ files:
           display: block;
           image-rendering: pixelated;
       }
+  - path: course1/unit2/lesson1/lessonpart2/refactoring.js
+    content: |-
+      // Game Settings
+      const GAME_SETTINGS = {
+          shipSpeed: 3,
+          enemySpeed: 2,
+          shotSpeed: 5,
+          enemySpawnRate: 0.02,
+          fireRate: 120,
+          maxEnemies: 10
+      };
+
+      // Game State
+      let gameState = {
+          app: null,
+          ship: null,
+          enemies: [],
+          shots: [],
+          score: 0,
+          scoreText: null,
+          lastShotFrame: 0,
+          keys: {}
+      };
+
+      // Main Game Loop
+      function gameUpdate() {
+          updateEnemies();
+          handleShooting();
+          updateShots();
+          handlePlayerMovement();
+          checkShotEnemyCollisions();
+          checkPlayerEnemyCollisions();
+      }
 units:
   - unit1/index.yml
   - unit3/index.yml
