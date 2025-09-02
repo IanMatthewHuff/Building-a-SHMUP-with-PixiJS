@@ -3,8 +3,33 @@ id: lessonpart2
 title: Organizing your code
 content: >
   As you build bigger and bigger games, especially when following along with a
-  course like this adding chunks of code, you may realized that there are areas
-  of your code that, while they work fine, can be hard to read, and difficult to
-  add new changes to. This is where the process of
+  course like this adding code in small chunks, you may realize that there are
+  areas of your code that, while they work fine, can be hard to read, and
+  difficult to add new changes to. This is where the process of
   [refactoring](https://en.wikipedia.org/wiki/Code_refactoring) comes into play,
   and it's super important for both games and just programming in general.
+  Refactoring is the process of improving our code internally, without making
+  any visible changes to the external way that our game plays. Here are a couple
+  of suggestions that could help to clean up the game we built.
+
+
+  ### Game Settings and State
+
+
+  At various locations in our code we have settings, initial values for game
+  variables, and state, variables that change as we play the game. By grouping
+  those two things up into two object we can make it much easier to access state
+  at various points in our code or to tweak settings as we tune our gameplay. In
+  the code file to the right you could see a cleaner way to hold these settings
+  and state variables.
+
+
+  ### More functions
+
+
+  Our update loop is a bit messy at this point. Looking at it, you can see that
+  the work being doing is in a number of "groups" of associated work. With
+  access to our settings and state we could use more functions to break this
+  loop down more. Again on the right you could see an alternative way to write
+  our update function, and ones that is much easier to find where to make
+  changes to when you are adding something new.
