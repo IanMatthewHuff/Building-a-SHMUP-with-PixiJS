@@ -36,8 +36,9 @@ content: >+
   changes to when you are adding something new.
 
 
-  > \[!NOTE] This file doesn't run, it's just to show a couple of possible
-  refactorings
+  > \[!NOTE]
+
+  > This file doesn't run, it's just to show a couple of possible refactorings
 
 showEditor: true
 editors:
