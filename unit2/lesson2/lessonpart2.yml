@@ -1,5 +1,26 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart2
-title: Promoting your game
-content: |
-  TBD
+title: 🧑‍🏫 Learning more
+content: >+
+  PixiJS
+
+
+  * PixiJS maintains a set of v8.0 tutorials
+  [here](https://pixijs.com/8.x/tutorials) that can help walk you through the
+  basics.
+
+
+  * For digging in past the basic tutorials PixiJS documentation is
+  [here](https://pixijs.download/release/docs/index.html).
+
+
+  SHMUPs
+
+
+  * Reddit's [r/shmups](reddit.com/r/shmups) channel is a good place to learn
+  about interesting new games and revisit past classic in the genre.
+
+  * System11 forums are focused just on SHMUP games, and they have a weath of
+  information in particular for deep fans of the genre. They also have a wiki
+  with detailed information on a number of classic games.
+
