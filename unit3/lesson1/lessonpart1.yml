@@ -41,3 +41,17 @@ content: >+
       J --> C
   ```
 
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: What does FPS stand for?
+        options:
+          - id: "1"
+            value: Frame Percent Served
+            isCorrect: true
+          - id: "2"
+            value: Fast PNG Setup
+          - id: "3"
+            value: Frames Per Second
