@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
-title: Loading a sprite
+title: 📥 Loading a sprite
 content: |
   With the boring setup bits out of the way it's time to actually get something drawing on the screen! For the purpose of this course sample images have been provided for you to use. This lets you get right into focusing on the PixiJS coding parts, but we do have a section in "Next Steps" that shows you how to create and upload custom images to use for your game. 
 
