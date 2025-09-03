@@ -1,5 +1,11 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart1
 title: Publishing your game
-content: |
-  TBD
+content: >+
+  One of the best parts about creating a game is sharing it with others. VS Code
+  for Education provides an easy way to share the game that you've created with
+  anyone on the internet. It does take a couple of steps though.
+
+
+  ### Creating a Project
+
