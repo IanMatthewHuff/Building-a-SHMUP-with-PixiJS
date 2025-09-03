@@ -39,8 +39,6 @@ content: |+
 
   *Parodius Da! - Enemies and especially bosses, appear large and in more types versus the player ship. So it's a great place to get crazy, like in Konami's parody series Parodius, with something like a giant pirate-cat-ship crewed by penguins.*
 
-  <br />
-
 showEditor: true
 editors:
   - course1/index.html
