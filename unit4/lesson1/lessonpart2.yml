@@ -96,3 +96,18 @@ editors:
   - course1/index.html
   - course1/script.js
   - course1/styles.css
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: When an enemy sprite has moved off the bottom of the screen we need
+          to...
+        options:
+          - id: "1"
+            value: Set its speed to zero
+          - id: "2"
+            value: Remove it from the stage
+            isCorrect: true
+          - id: "3"
+            value: Add it to the list of off stage enemies
