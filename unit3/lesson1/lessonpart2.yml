@@ -33,3 +33,20 @@ editors:
   - course1/index.html
   - course1/script.js
   - course1/styles.css
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: multiple
+        content: Which of the following would be happening in the game loop?
+        options:
+          - id: "1"
+            value: Updating the X and Y positions of the player ship
+            isCorrect: true
+          - id: "2"
+            value: Loading textures for sprites
+          - id: "3"
+            value: Spawning new enemies
+            isCorrect: true
+          - id: "4"
+            value: Setting our game's aspect ratio
