@@ -26,3 +26,17 @@ showEditor: true
 editors:
   - course1/unit1/lesson1/lessonpart4/script.js
   - course1/unit1/lesson1/lessonpart4/index.html
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: Javascript provides what function for a website?
+        options:
+          - id: "1"
+            value: The UI elements of the page
+          - id: "2"
+            value: Code to make the page move and react
+            isCorrect: true
+          - id: "3"
+            value: Style and theming
