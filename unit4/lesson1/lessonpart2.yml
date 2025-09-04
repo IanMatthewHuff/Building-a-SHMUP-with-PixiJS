@@ -5,14 +5,14 @@ content: >
   One enemy sitting right in front of your ship does not make for a very tense
   SHMUP game. What we want is for there to be lots of incoming enemies, moving
   down at the player. So our next step is to spawn waves of enemies from the top
-  of the screen and move them down toward the player. The spawn enemy function
+  of the screen and move them down toward the player. The `spawnEnemy` function
   that we've already made will be helpful for spawning more enemies on screen.
 
 
   ### Spawning in update
 
 
-  First thing we'll do, at the same location that we added our shipSpeed
+  First thing we'll do, at the same location that we added our `shipSpeed`
   variable, add another variable for the speed of enemy ships and how likely
   they are to spawn.
 
@@ -40,7 +40,8 @@ content: >
   Then remove the call to `spawnEnemy` that is outside of the update loop and
   instead call it inside the update loop. With this call we want to spawn
   enemies at a certain random probability, and call put in a check to not spawn
-  too many at once if the odds go against us.
+  too many at once if the odds go against us. Right now we'll set it to never
+  have more than ten enemies on the screen at one time.
 
 
   ```javascript
@@ -63,7 +64,9 @@ content: >
   enemies down the screen. In addition to moving them down, those sprites would
   happily stick around in our enemies array even after they had long exited the
   bottom of the screen, so let's add code to remove them from the scene when
-  they go of the bottom.
+  they go off the bottom. If you are not familiar with Javascript arrays,
+  `splice` is just an easy way to remove an element from a position in the
+  array.
 
 
   ```javascript
@@ -90,7 +93,7 @@ content: >
   usually set for a level, and by playing a game more you can build up skills
   for how you handle each wave. That's actually a great topic to include in a
   follow up course, but for the purposes of our simple example we'll use much
-  simple random spawning and movement.
+  simpler random spawning and movement.
 showEditor: true
 editors:
   - course1/index.html
