@@ -1,6 +1,11 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lesson1
 title: Improving your game
+description: Steps that you can take to expand and improve on this product
+objectives: |-
+  - Learn how to add your own custom images
+  - Learn how to better organize your code
+  - Learn ways to expand your game play
 lessonParts:
   - lessonpart1.yml
   - lessonpart2.yml
