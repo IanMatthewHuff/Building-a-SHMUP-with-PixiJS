@@ -43,3 +43,18 @@ content: >+
 showEditor: true
 editors:
   - course1/unit2/lesson1/lessonpart2/refactoring.js
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: multiple
+        content: What does refactoring code do?
+        options:
+          - id: "1"
+            value: Helps make code more readable.
+            isCorrect: true
+          - id: "2"
+            value: Improves the game play.
+          - id: "3"
+            value: Organizes existing code to more easily make new additions.
+            isCorrect: true
