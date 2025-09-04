@@ -6,9 +6,9 @@ content: |
 
   ### Ticker
 
-  For PixiJS timing the [Ticker](https://pixijs.download/release/docs/ticker.Ticker.html) class is what we use for controlling game update timing. If you look at the documentation more there is lot of flexibility with controlling multiple different tickers for various animation and game update functions. But for now we can stick with just using the ticker built into the game App that we already created.
+  For PixiJS timing the [Ticker](https://pixijs.download/release/docs/ticker.Ticker.html) class is what we use for controlling game updates. If you look at the documentation more there is lot of flexibility with controlling multiple different tickers for various animation and game update functions. But for now we can stick with just using the ticker built into the app that we already created.
 
-  Lets add an update function to the main Ticker of our game:
+  Let's add an update function to the main Ticker of our game:
 
   ```javascript
       // Hook up our update function
@@ -17,7 +17,7 @@ content: |
       app.ticker.add(update);
   ```
 
-  Seems like nothing happened with that change? That's because we've hooked up an update function that's not changing anything. To have something actually happen here, go ahead and add a line like this to the update function body.
+  Seems like nothing happened with that change? That's because we've hooked up an `update` function that's not changing anything. To have something actually happen here, go ahead and add a line like this to the update function body.
 
   ```javascript
   ship.rotation += .1;
