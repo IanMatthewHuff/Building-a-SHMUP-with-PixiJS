@@ -14,7 +14,7 @@ content: |+
       const shots = [];
   ```
 
-  Next, at the location where we keep all our speed and spawning constants.
+  Next, at the location where we keep all our speed and spawning constants add a few variables to control these shots.
 
   ```javascript
       const shotSpeed = 5;
@@ -22,7 +22,7 @@ content: |+
       let lastShotFrame = 0;
   ```
 
-  These values will track how fast our shots move and control the rate that we can fire them at. Just like with `spawnEnemy` we'll add our own reusable function to use for shooting a projectile. This can be placed above or below the `spawnEnemy` function to keep our spawning function in the same 
+  These values will track how fast our shots move and control the rate that we can fire them at. Just like with `spawnEnemy` we'll add our own reusable function to use for shooting a projectile. This can be placed above or below the `spawnEnemy` function to keep our spawning functions in the same location.
 
   ```javascript
       // Function to shoot a projectile
