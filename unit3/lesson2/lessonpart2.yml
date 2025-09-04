@@ -8,7 +8,7 @@ content: |+
 
   ### Adding to the scene
 
-  Super simple adding our ship to the main scene. Just use the `addChild` function to add it. Why would this be called `app.stage` and not `app.scene`? `app.stage` is just a top level scene that's automatically created for you when an app is create.
+  Super simple adding our ship to the main scene. Just use the `addChild` function to add it. Why would this be called `app.stage` and not `app.scene`? `app.stage` is just a top level scene that's automatically created for you when an app is created, for a simple game it's all that we need.
 
   ```javascript
       // Add to stage
