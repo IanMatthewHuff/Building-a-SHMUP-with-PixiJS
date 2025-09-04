@@ -2,11 +2,11 @@
 id: lessonpart2
 title: 🖼️ Initializing our viewport
 content: |+
-  The first step that we'll need to take here is to create the display area, or viewport that we will draw our game in.
+  Our first step is to create the display area, or viewport that we will draw our game in.
 
   ### Centering our viewport
 
-  The first step that we'll take is to center our viewport in the window. This process involves a small bit of CSS styling with our styles.css file. Try taking this code block here and adding it `styles.css`.
+  We want to center our viewport in the window, regardless of the size and shape of the window. This process involves a small bit of CSS styling with our styles.css file. Try taking this code block here and adding it `styles.css`.
 
   ```css
   body {
@@ -24,7 +24,7 @@ content: |+
   }
   ```
 
-  This code tells the main body of the HTML document to see its background to black `background: #000`, to align content inside it to the center `justify-content:center`, to take up all of the vertical height `min-height: 100vh`, and to remove margin and padding. Then the `<canvas>` element that PixiJS will add is told to use block display inside the body.
+  This code tells the main body of the HTML document to set its background to black `background: #000`, to align content inside it to the center `justify-content:center`, to take up all of the vertical height `min-height: 100vh`, and to remove margin and padding. Then the `<canvas>` element that PixiJS will add is told to use block display inside the body. This is the only CSS that well need to do for this project so no need to dig in too deep on it.
 
   > \[!NOTE]
   > Try tweaking the values in the background: property to see the background color of the document change in the HTML preview. I'm partial to a nice 90's magenta (#f46fde) myself.
@@ -51,7 +51,7 @@ content: |+
 
   ### Initializing our PixiJS application
 
-  PixiJS uses an [application](https://pixijs.download/release/docs/app.html#creating-an-application) class that is the core of a PixiJS game. The next step is to perform an init of this application. In `script.js` after the aspect ratio setting we'll create a new init game function like so:
+  PixiJS uses an [application](https://pixijs.download/release/docs/app.html#creating-an-application) class that is the core of a PixiJS game. The next step is to perform an init of this application. In `script.js` after the aspect ratio setting we'll create a new `initGame` function like so:
 
   ```javascript
   async function initGame() {

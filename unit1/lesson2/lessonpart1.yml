@@ -37,7 +37,7 @@ content: |+
   By setting up this HTML page, you establish the groundwork for your PixiJS game, enabling you to start adding and manipulating game elements in subsequent lessons.
 
   > \[!NOTE]
-  > From this point on we'll be carrying the same index.html, style and script files from lesson part to lesson part, so you can keep building by adding to the files
+  > From this point on we'll be carrying the same index.html, style and script files from lesson part to lesson part, so you can keep building by adding to the files.
 
 showEditor: true
 editors:
