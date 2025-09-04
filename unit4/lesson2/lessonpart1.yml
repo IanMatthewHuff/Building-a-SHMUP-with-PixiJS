@@ -42,7 +42,7 @@ content: |+
 
   ### Firing the shot
 
-  We've added the sprite and the function to fire a projectile. Now we need to make some additions to the \`update function to handle the keypress for firing the shot and moving the active projectiles. First off is the keypress for firing the shot.
+  We've added the sprite and the function to fire a projectile. Now we need to make some additions to the `update` function to handle the keypress for firing the shot and moving the active projectiles. First off is the keypress for firing the shot.
 
   ```javascript
           // Handle shooting with space key and fire rate control
@@ -52,12 +52,12 @@ content: |+
           }
   ```
 
-  The ticker class in PixiJS keeps a [lastTime](https://pixijs.download/release/docs/ticker.html#timing-properties) property that tracks the last time that the update function ran. Here we use that value to track if we've waited long enough, based on our fireRate value, to trigger a new shot. Using the fire rate like this means that we don't have to hammer on our firing button, we can just hold down the space button and our ship will continue to fire at a reasonable rate. Some classic SHMUP games allowed you to fire basically as fast as you could hit the button, but realizing how this added an odd skill cap to getting the best scores, and how hard it was on arcade machines many modern games now provide an autofire option with set or adjustable fire rates.
+  The ticker class in PixiJS keeps a [lastTime](https://pixijs.download/release/docs/ticker.html#timing-properties) property that tracks the last time that the update function ran. Here we use that value to track if we've waited long enough, based on our fireRate value, to trigger a new shot. Using the fire rate like this means that we don't have to hammer on our firing button, we can just hold down the space button and our ship will continue to fire at a reasonable rate. Some classic SHMUP games allowed you to fire basically as fast as you could hit the button, but realizing how this added an odd skill cap to getting the best scores, and how hard it was on arcade machine buttons, many modern games now provide an auto-fire option with set or adjustable fire rates.
 
   After the shot triggering we need to move the projectiles up the screen.
 
   ```javascript
-         // Move player shots upward
+          // Move player shots upward
           for (let i = shots.length - 1; i >= 0; i--) {
               const shot = shots[i];
               shot.y -= shotSpeed;
