@@ -109,3 +109,19 @@ editors:
   - course1/index.html
   - course1/script.js
   - course1/styles.css
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: A simple algorithm for 2D collision detection is?
+        options:
+          - id: "1"
+            value: ABBA
+          - id: "2"
+            value: FPS
+          - id: "3"
+            value: AABB
+            isCorrect: true
+          - id: "4"
+            value: Nearest Neighbor
