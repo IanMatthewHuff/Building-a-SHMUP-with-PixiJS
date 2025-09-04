@@ -24,3 +24,19 @@ content: |
   * **Free** - We are looking for something totally free to use
 
   With that above criteria PixiJS is a great fit for us. It's explicitly billed as a rendering engine as opposed to a full game engine, using something like Unity might provide us with a much more fully feature game engine, but we'll learning more by implementing that basic game engine code ourselves.
+questionGroups:
+  - id: "1"
+    questions:
+      - id: "1"
+        type: choice
+        content: Which is NOT a feature of PixiJS?
+        options:
+          - id: "1"
+            value: Fast rendering of 2D graphics.
+            isCorrect: true
+          - id: "2"
+            value: A full featured game engine.
+          - id: "3"
+            value: Easy to add into any web page.
+          - id: "4"
+            value: Free to use.
