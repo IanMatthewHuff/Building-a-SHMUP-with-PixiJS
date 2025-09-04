@@ -37,9 +37,6 @@ content: |+
       }
   ```
 
-  > \[!NOTE]
-  > Our x and y positions here are relative to the ship's location and not the screen. This will position them in the correct position to spawn at the front of our ship.
-
   ### Firing the shot
 
   We've added the sprite and the function to fire a projectile. Now we need to make some additions to the \`update function to handle the keypress for firing the shot and moving the active projectiles. First off is the keypress for firing the shot.
