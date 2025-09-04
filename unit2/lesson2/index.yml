@@ -1,6 +1,10 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lesson2
 title: Sharing your game
+description: Learn how to share your code or your completed game live online.
+objectives: |-
+  - Learn how to share your game code online
+  - Learn how to share your running game website online
 lessonParts:
   - lessonpart1.yml
   - lessonpart2.yml
