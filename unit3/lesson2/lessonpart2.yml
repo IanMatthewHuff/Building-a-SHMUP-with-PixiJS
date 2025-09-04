@@ -17,7 +17,7 @@ content: |+
 
   ### Positioning in the scene
 
-  After adding to the scene, we can then use various function calls to position the ship within the state.
+  After adding to the scene, we can then use various function calls or properties to position the ship within the state. Below, we set the "anchor" of the sprite to the center of the sprite, then set the x and y values to position it in the center of the screen.
 
   ```javascript
       // Center the sprite's anchor point
