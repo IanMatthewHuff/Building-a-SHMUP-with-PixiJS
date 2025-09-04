@@ -1,9 +1,14 @@
 # yaml-language-server: $schema=https://vscodeedu.com/assets/schema/course-v2.schema.json
 id: lessonpart4
 title: ☑️ Checkpoint 2
-content: >
+content: >+
   Here is another checkpoint to make sure your project is up to date. Just come
-  back here and look at the example files to see if anything is of
+  back here and look at the example files to see if anything is off with your
+  current code.
+
+
+  <br />
+
 showEditor: true
 editors:
   - course1/index.html
