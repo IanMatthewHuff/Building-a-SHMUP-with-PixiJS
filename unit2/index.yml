@@ -7,7 +7,7 @@ objectives: |-
   - Learn some interesting additions that you could make to your project
   - Learn ways to help organize your code better
   - Learn how to publish custom images to use with your project
-  - Learn how to share your project online
+  - Learn more resources for SHMUP development
 lessons:
   - lesson1/index.yml
   - lesson2/index.yml
