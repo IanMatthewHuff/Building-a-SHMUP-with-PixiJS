@@ -30,7 +30,7 @@ content: |+
 
   * **File Setup:** The correct files for our web app have been created and linked in, moving forward we'll be editing these files (mainly script.js) to create our game.
 
-  * **Canvas Element**: The PixiJS application automatically creates a `<canvas>` element, you don't have to manually add it to your HTML, which is where all the rendering happens. This canvas is appended to the HTML document, allowing you to see the graphics rendered by PixiJS. Learn more about `<canvas>` [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+  * **Canvas Element**: The PixiJS application automatically creates a `<canvas>` element—you don't have to manually add it to your HTML—which is where all the rendering happens. This canvas is appended to the HTML document, allowing you to see the graphics rendered by PixiJS. Learn more about `<canvas>` [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
   <br />
 

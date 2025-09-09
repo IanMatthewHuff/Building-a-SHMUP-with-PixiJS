@@ -39,7 +39,7 @@ content: >
 
   Then remove the call to `spawnEnemy` that is outside of the update loop and
   instead call it inside the update loop. With this call we want to spawn
-  enemies at a certain random probability, and call put in a check to not spawn
+  enemies at a certain random probability, and put in a check to not spawn
   too many at once if the odds go against us. Right now we'll set it to never
   have more than ten enemies on the screen at one time.
 
