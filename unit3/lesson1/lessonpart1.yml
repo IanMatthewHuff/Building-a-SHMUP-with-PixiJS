@@ -9,7 +9,7 @@ content: >+
   ### Game update loops
 
 
-  Many applications and websites run in a way that the users hits a key or
+  Many applications and websites run in a way that the user hits a key or
   presses a button, then the UI updates, then it goes back to waiting for the
   next user input. But this doesn't work for something like a video game. Video
   games need to be updating all the time, enemies are moving, sprites are
@@ -19,7 +19,7 @@ content: >+
   ([Frames Per Second](https://en.wikipedia.org/wiki/Frame_rate)) they are
   referring to how fast the game update loop is running. The faster the game
   update loop is running the more responsive the game feels and the smoother the
-  animations look, 60 FPS is considered a bit of gold standard for games, while
+  animations look. 60 FPS is considered a bit of a gold standard for games, while
   dropping under 30 FPS can start to feel laggy and jittery.
 
 
@@ -51,8 +51,8 @@ questionGroups:
         options:
           - id: "1"
             value: Frame Percent Served
-            isCorrect: true
           - id: "2"
             value: Fast PNG Setup
           - id: "3"
             value: Frames Per Second
+            isCorrect: true

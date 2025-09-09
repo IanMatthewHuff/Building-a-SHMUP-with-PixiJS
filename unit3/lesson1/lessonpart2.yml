@@ -6,7 +6,7 @@ content: |
 
   ### Ticker
 
-  For PixiJS timing the [Ticker](https://pixijs.download/release/docs/ticker.Ticker.html) class is what we use for controlling game updates. If you look at the documentation more there is lot of flexibility with controlling multiple different tickers for various animation and game update functions. But for now we can stick with just using the ticker built into the app that we already created.
+  For PixiJS timing, the [Ticker](https://pixijs.download/release/docs/ticker.Ticker.html) class is what we use for controlling game updates. If you look at the documentation more, there is a lot of flexibility with controlling multiple different tickers for various animation and game update functions. But for now we can stick with just using the ticker built into the app that we already created.
 
   Let's add an update function to the main Ticker of our game:
 

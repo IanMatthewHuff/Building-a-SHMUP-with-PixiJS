@@ -39,7 +39,7 @@ content: >
 
   Then remove the call to `spawnEnemy` that is outside of the update loop and
   instead call it inside the update loop. With this call we want to spawn
-  enemies at a certain random probability, and call put in a check to not spawn
+  enemies at a certain random probability, and put in a check to not spawn
   too many at once if the odds go against us. Right now we'll set it to never
   have more than ten enemies on the screen at one time.
 
@@ -64,7 +64,7 @@ content: >
   enemies down the screen. In addition to moving them down, those sprites would
   happily stick around in our enemies array even after they had long exited the
   bottom of the screen, so let's add code to remove them from the scene when
-  they go off the bottom. If you are not familiar with Javascript arrays,
+  they go off the bottom. If you are not familiar with JavaScript arrays,
   `splice` is just an easy way to remove an element from a position in the
   array.
 

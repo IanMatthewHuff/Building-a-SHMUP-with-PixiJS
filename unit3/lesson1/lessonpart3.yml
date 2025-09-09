@@ -2,7 +2,7 @@
 id: lessonpart3
 title: Moving our ship
 content: |
-  A game with a ship automatically rotating in a circle doesn't seem like much fun, so let's change it so that we're actually controlling the ships movement around the game field.
+  A game with a ship automatically rotating in a circle doesn't seem like much fun, so let's change it so that we're actually controlling the ship's movement around the game field.
 
   ### Moving with the keyboard
 
