@@ -3,10 +3,12 @@ id: course1
 title: Building a SHMUP with PixiJS
 level: beginner
 description: Learn to build a simple web SHMUP game with PixiJS
+objectives: Learn the basics of the PixiJS HTML5 rendering engine by creating a
+  simple SHMUP game
 cardImageUrl: https://vscodeedu.com/assets/course-cards/card6.png
 contacts:
   - displayName: Ian Huff
-    pictureUrl: https://avatars.githubusercontent.com/u/812783?v=4
+    affiliation: Microsoft
     homePageUrl: https://github.com/IanMatthewHuff
 files:
   - path: course1/index.html
