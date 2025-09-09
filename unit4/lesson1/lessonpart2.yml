@@ -64,7 +64,7 @@ content: >
   enemies down the screen. In addition to moving them down, those sprites would
   happily stick around in our enemies array even after they had long exited the
   bottom of the screen, so let's add code to remove them from the scene when
-  they go off the bottom. If you are not familiar with Javascript arrays,
+  they go off the bottom. If you are not familiar with JavaScript arrays,
   `splice` is just an easy way to remove an element from a position in the
   array.
 

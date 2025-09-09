@@ -25,7 +25,7 @@ questionGroups:
     questions:
       - id: "1"
         type: choice
-        content: Javascript provides what function for a website?
+        content: JavaScript provides what function for a website?
         options:
           - id: "1"
             value: The UI elements of the page
