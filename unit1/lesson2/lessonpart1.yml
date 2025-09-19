@@ -8,7 +8,7 @@ content: |+
 
   1. **HTML Document Structure**: Start by creating a basic HTML document. This includes the `<!DOCTYPE html>` declaration, `<html>`, `<head>`, and `<body>` tags.&#x20;
 
-  2. **Including PixiJS**: In the `<body>` section, include the PixiJS library by adding a `<script>` tag. You can use a CDN link to the latest version of PixiJS, which allows you to easily access the library without downloading it. **Note:** Often a library like this would go in the \`\<head>\` section, but we're doing it a bit different here since we are not using a build system to build our webpage before we put it online.
+  2. **Including PixiJS**: In the `<body>` section, include the PixiJS library by adding a `<script>` tag. You can use a CDN link to the latest version of PixiJS, which allows you to easily access the library without downloading it. **Note:** Often a library like this would go in the \`\<head>\` section, but we're doing it a bit differently here since we are not using a build system to build our webpage before we put it online.
 
      ```html
      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.12.0/pixi.min.js"></script>
@@ -20,7 +20,7 @@ content: |+
      <script src="script.js"></script>
      ```
 
-  4. **Adding a style file:** In general we won't need a lot of [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) styling on our page. CSS is used for styling HTML element and most of our work is just being drawn inside a single canvas element. However we will use a bit of styling to get our main game viewport centered in the screen. As such a styles.css file has been included in the project, and we'll need to add this line to the head section to include it.
+  4. **Adding a style file:** In general, we won't need a lot of [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) styling on our page. CSS is used for styling HTML elements and most of our work is just being drawn inside a single canvas element. However, we will use a bit of styling to get our main game viewport centered in the screen. As such, a styles.css file has been included in the project, and we'll need to add this line to the head section to include it.
 
      ```html
      <link rel="stylesheet" href="styles.css" />

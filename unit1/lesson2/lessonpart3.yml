@@ -5,7 +5,7 @@ content: |
   Our PixiJS canvas is on screen, but it looks a little...small? And what will happen when the browser size changes? Let's handle this by adding code to our script for resizing the game canvas.
 
   > \[!NOTE]
-  > We're going to be resizing the game display canvas here, not the actual size of the internal game engine. The game engine will continue to run at our smaller retro game resolution, but we're going to scale up the final output resolution while maintaining the aspect ratio to avoid stretching. An important distinction to remember as our positioning calculations for object will all be in the game engine resolution.
+  > We're going to be resizing the game display canvas here, not the actual size of the internal game engine. The game engine will continue to run at our smaller retro game resolution, but we're going to scale up the final output resolution while maintaining the aspect ratio to avoid stretching. An important distinction to remember as our positioning calculations for objects will all be in the game engine resolution.
 
   ### Handling resizes
 
