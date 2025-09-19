@@ -38,7 +38,7 @@ questionGroups:
     questions:
       - id: "1"
         type: choice
-        content: A graphical element that moves on top of a background image is know as
+        content: A graphical element that moves on top of a background image is known as
           a what?
         options:
           - id: "1"

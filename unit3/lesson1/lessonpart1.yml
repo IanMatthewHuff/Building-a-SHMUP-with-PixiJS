@@ -9,7 +9,7 @@ content: >+
   ### Game update loops
 
 
-  Many applications and websites run in a way that the users hits a key or
+  Many applications and websites run in a way that the user hits a key or
   presses a button, then the UI updates, then it goes back to waiting for the
   next user input. But this doesn't work for something like a video game. Video
   games need to be updating all the time, enemies are moving, sprites are
