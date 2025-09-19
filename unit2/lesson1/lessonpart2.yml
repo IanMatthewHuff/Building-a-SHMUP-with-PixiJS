@@ -18,7 +18,7 @@ content: >+
 
   At various locations in our code we have settings, initial values for game
   variables, and state, variables that change as we play the game. By grouping
-  those two things up into two object we can make it much easier to access state
+  those two things up into two objects we can make it much easier to access state
   at various points in our code or to tweak settings as we tune our gameplay. In
   the code file to the right you could see a cleaner way to hold these settings
   and state variables. Notice that we use `const` for our settings as we don't
@@ -29,10 +29,10 @@ content: >+
 
 
   Our update loop is a bit messy at this point. Looking at it, you can see that
-  the work being doing is in a number of "groups" of associated work. With
+  the work being done is in a number of "groups" of associated work. With
   access to our settings and state we could use more functions to break this
   loop down more. Again on the right you could see an alternative way to write
-  our update function, and ones that is much easier to find where to make
+  our update function, and one that is much easier to find where to make
   changes to when you are adding something new.
 
 

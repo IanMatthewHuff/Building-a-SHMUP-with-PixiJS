@@ -5,7 +5,7 @@ content: |
   There are a number of next steps that we could take to expand and improve on this project that are detailed in the section below.
 
   > \[!NOTE]
-  > Make sure to check out the section on "Publishing your game" to see how easy it is to share your create with friends!
+  > Make sure to check out the section on "Publishing your game" to see how easy it is to share your creation with friends!
 
   But for one final thing, let's actually show that score that we were keeping track of on screen so you can see how well you are doing. We can add in a PixiJS [Text](https://pixijs.download/release/docs/scene.Text.html) object that, like a Sprite, can be added to the scene and updated. Add this code in after where the the `score` variable was initialized.
 
