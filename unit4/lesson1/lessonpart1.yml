@@ -2,7 +2,7 @@
 id: lessonpart1
 title: Loading the enemy sprites
 content: |
-  Our next step is going to be adding the enemy ships into our game. Start by adding a new texture load for the `enemy-ship.png` image below where we added the `player-ship.png` texture. In addition to this new texture also add an empty enemies array. Unlike our player ship, the amount of enemies on screen in dynamic, so we're using an array here that we'll add enemies to and remove enemies from.
+  Our next step is going to be adding the enemy ships into our game. Start by adding a new texture load for the `enemy-ship.png` image below where we added the `player-ship.png` texture. In addition to this new texture also add an empty enemies array. Unlike our player ship, the amount of enemies on screen is dynamic, so we're using an array here that we'll add enemies to and remove enemies from.
 
   ```javascript
       // Load enemy ships

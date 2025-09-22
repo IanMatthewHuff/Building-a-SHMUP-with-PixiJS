@@ -6,7 +6,7 @@ content: |
 
   ### AABB
 
-  No AABB is not a [famous Swedish pop band ](https://en.wikipedia.org/wiki/ABBA)instead, it's a fast and simple algorithm for basic 2D collision detection between two rectangles. You can read the details [here ](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection#aabb_vs._aabb)(just skip the Z axis part for 2D) if you want the nitty gritty. The important thing is that it's a fast, easy to understand algorithm for seeing if two rectangles intersect at all, so it's perfect for what we are doing here. We're going to be checking a lot of collisions, so let's go ahead and make this a reusable function that takes two PixiJS sprites and sees if they collide. `getBounds` is just a handy helper function that PixiJS sprites provide to get the rectangle bounding the sprite.
+  No AABB is not a [famous Swedish pop band ](https://en.wikipedia.org/wiki/ABBA); instead, it's a fast and simple algorithm for basic 2D collision detection between two rectangles. You can read the details [here ](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection#aabb_vs._aabb)(just skip the Z axis part for 2D) if you want the nitty gritty. The important thing is that it's a fast, easy to understand algorithm for seeing if two rectangles intersect at all, so it's perfect for what we are doing here. We're going to be checking a lot of collisions, so let's go ahead and make this a reusable function that takes two PixiJS sprites and sees if they collide. `getBounds` is just a handy helper function that PixiJS sprites provide to get the rectangle bounding the sprite.
 
   ```javascript
       // Collision detection function
